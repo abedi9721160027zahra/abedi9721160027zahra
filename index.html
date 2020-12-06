@@ -14,7 +14,7 @@
     <header>
       <ul>
         <li>
-          <a href="index.html" style="color: red;">غذای ایرانی</a>
+          <a id="first" href="index.html" style="color: red;">غذای ایرانی</a>
         </li>
         <li><a href="index2.html">فست فود</a></li>
         <li><a href="index3.html">غذای دریایی</a></li>
@@ -66,21 +66,15 @@
           </div>
         <div>
           <script type="text/javascript">
-            console.dir(document);
-            console.log(document.domain);
-            console.log(document.URL);
-            console.log(document.title);
-            document.title =  123;
-            console.log(document.doctype);
-            console.log(document.head);
-            console.log(document.body);
-            console.log(document.all);
-            console.log(document.all[10]);
-            document.all[10].textContent = 'Hello';
-            console.log(document.forms[0]);
-            console.log(document.links);
-            console.log(document.images);
-
+            console.log(document.getElementById('first'));
+            let first = document.getElementById('header-title');
+            let header = document.getElementById('main-header');
+            console.log(first);
+            first.textContent = 'Hello';
+            first.innerText = 'Goodbye';
+            console.log(first.innerText);
+            first.innerHTML = '<h3>Hello</h3>';
+            header.style.borderBottom = 'solid 3px #000';
           </script>
         </div>
         </div>
